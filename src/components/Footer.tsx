@@ -10,6 +10,7 @@ const Footer = () => (
             Building companies. Scaling ideas. Creating global impact.
           </p>
         </div>
+
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-4">Company</h4>
           <div className="flex flex-col gap-2">
@@ -18,12 +19,17 @@ const Footer = () => (
               { to: "/portfolio", label: "Portfolio" },
               { to: "/capabilities", label: "Capabilities" },
             ].map((l) => (
-              <Link key={l.to} to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 {l.label}
               </Link>
             ))}
           </div>
         </div>
+
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-4">Connect</h4>
           <div className="flex flex-col gap-2">
@@ -32,21 +38,45 @@ const Footer = () => (
               { to: "/careers", label: "Careers" },
               { to: "/contact", label: "Contact" },
             ].map((l) => (
-              <Link key={l.to} to={l.to} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <Link
+                key={l.to}
+                to={l.to}
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
                 {l.label}
               </Link>
             ))}
           </div>
         </div>
+
         <div>
           <h4 className="text-sm font-semibold text-foreground mb-4">Legal</h4>
-          <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          <Link
+            to="/privacy"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
             Privacy Policy
           </Link>
         </div>
       </div>
+
+      {/* Giant brand text - ab thoda neeche hai */}
+      <div className="overflow-hidden mt-16 md:mt-20 lg:mt-24">
+        <p
+          className="text-[8vw] font-semibold tracking-tighter leading-none"
+          style={{
+            WebkitTextStroke: "1px hsl(var(--border))",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          CAREFLARE
+        </p>
+      </div>
+
       <div className="mt-16 pt-8 border-t border-border/30 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Careflare. All rights reserved.</p>
+        <p className="text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Careflare. All rights reserved.
+        </p>
         <p className="text-xs text-muted-foreground">careers@careflare.life</p>
       </div>
     </div>
