@@ -15,14 +15,14 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}   // faster
         >
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.05] tracking-tight">
             <motion.span
               className="block"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.3 }}
             >
               Building <span className="text-gradient">Companies.</span>
             </motion.span>
@@ -30,7 +30,7 @@ const HeroSection = () => {
               className="block"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
             >
               Scaling <span className="text-gradient">Ideas.</span>
             </motion.span>
@@ -38,7 +38,7 @@ const HeroSection = () => {
               className="block"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
             >
               Creating <span className="text-gradient">Global Impact.</span>
             </motion.span>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           className="mt-8 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
+          transition={{ duration: 0.5, delay: 0.9 }}   // faster
         >
           Careflare is a multi-sector business entity focused on building and operating high-growth ventures across technology, digital infrastructure, and consumer brands.
         </motion.p>
@@ -58,7 +58,7 @@ const HeroSection = () => {
           className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
+          transition={{ duration: 0.5, delay: 1.1 }}   // faster
         >
           <Link
             to="/portfolio"
@@ -75,17 +75,17 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - made slightly faster bounce */}
       <motion.div
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 1.6, repeat: Infinity }}
       >
         <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
           <motion.div
             className="w-1.5 h-1.5 rounded-full bg-primary/60"
-            animate={{ y: [0, 16, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            animate={{ y: [0, 13, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity }}
           />
         </div>
       </motion.div>
