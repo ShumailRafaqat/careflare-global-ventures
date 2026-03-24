@@ -11,6 +11,7 @@ const companies = [
     overview: "Quorixs is a technology-focused company specializing in automation, digital systems, and scalable infrastructure solutions.",
     services: ["Custom software solutions", "Process automation", "Digital infrastructure development"],
     market: "Businesses seeking scalable and efficient technology solutions.",
+    website: "https://quorisx.com/",   // ← Add this
   },
   {
     name: "Goalix",
@@ -18,6 +19,7 @@ const companies = [
     overview: "Goalix delivers high-quality athletic apparel and consumer products through modern e-commerce channels.",
     services: ["Premium sportswear design", "Direct-to-consumer retail", "Global distribution"],
     market: "Athletes and fitness enthusiasts seeking quality athletic apparel.",
+    website: "https://www.goalix/", // ← Add this
   },
 ];
 
@@ -76,6 +78,7 @@ const Portfolio = () => {
                     <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">{company.overview}</p>
                   </div>
 
+                  {/* Expanded Content */}
                   <motion.div
                     initial={false}
                     animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}
@@ -100,6 +103,22 @@ const Portfolio = () => {
                           <p className="text-sm text-muted-foreground">{company.market}</p>
                         </div>
                       </div>
+
+                      {/* Visit Website Button - Only shown when expanded */}
+                      {company.website && (
+                        <div className="mt-8 flex justify-start">
+                          <a
+                            href={company.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()} // Prevent closing the accordion
+                            className="group inline-flex items-center gap-3 px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-medium transition-all active:scale-95"
+                          >
+                            Visit Website
+                            <ExternalLink size={18} className="group-hover:rotate-45 transition-transform" />
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 </motion.div>
