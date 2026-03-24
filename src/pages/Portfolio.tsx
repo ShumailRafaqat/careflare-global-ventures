@@ -11,7 +11,6 @@ const companies = [
     overview: "Quorixs is a technology-focused company specializing in automation, digital systems, and scalable infrastructure solutions.",
     services: ["Custom software solutions", "Process automation", "Digital infrastructure development"],
     market: "Businesses seeking scalable and efficient technology solutions.",
-    url: "https://quorixs.com",
   },
   {
     name: "Goalix",
@@ -19,7 +18,6 @@ const companies = [
     overview: "Goalix delivers high-quality athletic apparel and consumer products through modern e-commerce channels.",
     services: ["Premium sportswear design", "Direct-to-consumer retail", "Global distribution"],
     market: "Athletes and fitness enthusiasts seeking quality athletic apparel.",
-    url: "https://goalix.com",
   },
 ];
 
@@ -36,7 +34,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-sm font-medium tracking-widest uppercase text-muted-foreground mb-4">Portfolio</p>
+            <p className="text-sm font-medium tracking-widest uppercase text-secondary mb-4">Portfolio</p>
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               Our <span className="text-gradient">Companies</span>
             </h1>
@@ -65,7 +63,7 @@ const Portfolio = () => {
                   <div className="p-8 md:p-10">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-sm font-medium text-muted-foreground mb-2">{company.sector}</p>
+                        <p className="text-sm font-medium text-secondary mb-2">{company.sector}</p>
                         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">{company.name}</h2>
                       </div>
                       <motion.div
@@ -102,15 +100,6 @@ const Portfolio = () => {
                           <p className="text-sm text-muted-foreground">{company.market}</p>
                         </div>
                       </div>
-                      <a
-                        href={company.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors duration-200"
-                      >
-                        Visit {company.name} <ExternalLink size={16} />
-                      </a>
                     </div>
                   </motion.div>
                 </motion.div>

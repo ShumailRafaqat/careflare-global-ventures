@@ -52,9 +52,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         olive: {
-          dark: "hsl(var(--navy-deep))",
+          dark: "hsl(var(--olive-dark))",
           DEFAULT: "hsl(var(--primary))",
-          light: "hsl(var(--navy-light))",
+          light: "hsl(var(--secondary))",
         },
         sage: "hsl(var(--secondary))",
         cream: "hsl(var(--cream))",
