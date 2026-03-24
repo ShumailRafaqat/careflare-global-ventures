@@ -1,16 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import SplashScreen from "@/components/SplashScreen";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import IntroSection from "@/components/IntroSection";
+import PortfolioPreview from "@/components/PortfolioPreview";
+import CapabilitiesPreview from "@/components/CapabilitiesPreview";
+import VisionSection from "@/components/VisionSection";
+import LocationSection from "@/components/LocationSection";
+import FooterCTA from "@/components/FooterCTA";
+import Footer from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = useCallback(() => {
+    setShowSplash(false);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
+      {!showSplash && (
+        <>
+          <Navbar />
+          <main>
+            <HeroSection />
+            <IntroSection />
+            <PortfolioPreview />
+            <CapabilitiesPreview />
+            <VisionSection />
+            <LocationSection />
+            <FooterCTA />
+          </main>
+          <Footer />
+        </>
+      )}
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
